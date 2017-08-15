@@ -1,0 +1,20 @@
+#parent {
+    display: flex;
+}
+
+#ticker {
+    max-width: 30%;
+    padding: 1em;
+}
+
+#leaderboard {
+    flex: 1;
+    padding: 1em;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+    margin: 10px;
+    background: lightpink;
+}

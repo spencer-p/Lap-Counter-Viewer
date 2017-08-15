@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<link type="text/css" rel="stylesheet" href="css/index.css"/>
+		<link type="text/css" rel="stylesheet" href="css/transitions.css"/>
+    </head>
+    <body>
+        <div id="app" style="display:none;">
+            <button v-on:click="insert">Click me</button>
+            <div id="parent">
+                <div id="ticker">
+                    <transition-group name="list">
+                        <div class="card list-item" v-for="i in ticker" v-bind:key="i"> {{ i }} </div>
+                    </transition-group>
+                </div>
+                <div id="leaderboard">
+                    How will leaderboard data be transferred?
+                </div>
+            </div>
+        </div>
+		<script type="text/javascript" src="js/jquery-min.js"></script>
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
