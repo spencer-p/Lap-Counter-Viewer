@@ -7,7 +7,7 @@ var app = function() {
     };
 
     self.insert = function() {
-        self.vue.ticker.splice(0, 0, Date());
+        self.vue.ticker.splice(0, 0, Date.now());
         if (self.vue.ticker.length > 10) {
             self.vue.ticker.pop()
         }
