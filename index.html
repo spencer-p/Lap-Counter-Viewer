@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
+	<head>
 		<meta charset="utf-8"/>
 		<link type="text/css" rel="stylesheet" href="css/index.css"/>
-    </head>
-    <body>
-        <div id="app" style="display:none;">
-            <button v-on:click="insert">Click me</button>
-            <div id="parent">
-                <div id="ticker">
+	</head>
+	<body onload="initialize()">
+		<div id="app" style="display:none;">
+			<button v-on:click="insert">Click me</button>
+			<div id="parent">
+				<div id="ticker">
 					<h1>Ticker</h1>
-                    <transition-group name="list">
+					<transition-group name="list">
 						<div class="square list-item" v-for="i in ticker" v-bind:key="i" v-bind:class="{ purple: i%2 == 1 }"> {{ i }} </div>
-                    </transition-group>
-                </div>
-                <div id="leaderboard">
+					</transition-group>
+				</div>
+				<div id="leaderboard">
 					<h1>Leaderboard</h1>
 					<transition-group name="list">
 						<div class="card list-item" v-for="i in leaderboard" v-bind:key="i"> {{ i }} </div>
 					</transition-group>
-                </div>
-            </div>
-        </div>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript" src="js/jquery-min.js"></script>
 		<script type="text/javascript" src="js/vue.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
-    </body>
+	</body>
 </html>

@@ -3,35 +3,35 @@ body {
 }
 
 #parent {
-    display: flex;
+	display: flex;
 }
 
 #ticker {
-    max-width: 30%;
-    padding: 1vmin;
+	max-width: 30%;
+	padding: 1vmin;
 }
 
 #leaderboard {
-    flex: 1;
-    padding: 1vmin;
+	flex: 1;
+	padding: 1vmin;
 }
 
 .square {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 1vmin;
-    margin: 1vmin;
-    height: 15vmin;
-    width: 15vmin;
-    background: lightpink;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	padding: 1vmin;
+	margin: 1vmin;
+	height: 15vmin;
+	width: 15vmin;
+	background: lightpink;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 1vmin;
-    margin: 1vmin;
-    height: 15vmin;
-    width: 100vmin;
-    background: lightblue;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	padding: 1vmin;
+	margin: 1vmin;
+	height: 15vmin;
+	width: 100vmin;
+	background: lightblue;
 }
 
 .purple {
@@ -41,10 +41,10 @@ body {
 
 /* List transitions */
 .list-item {
-    transition: all 1s;
-    display: inline-block;
+	transition: all 1s;
+	display: inline-block;
 }
 .list-enter, .list-leave-to {
-    opacity: 0;
-    transform: translateX(-18vmin);
+	opacity: 0;
+	transform: translateX(-18vmin);
 }
