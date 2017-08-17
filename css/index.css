@@ -1,3 +1,7 @@
+body {
+	font-family: Sans;
+}
+
 #parent {
     display: flex;
 }
@@ -12,13 +16,26 @@
     padding: 1vmin;
 }
 
-.card {
+.square {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     padding: 1vmin;
     margin: 1vmin;
     height: 15vmin;
     width: 15vmin;
     background: lightpink;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 1vmin;
+    margin: 1vmin;
+    height: 15vmin;
+    width: 100vmin;
+    background: lightblue;
+}
+
+.purple {
+	background: orchid;
 }
 
 
@@ -29,5 +46,5 @@
 }
 .list-enter, .list-leave-to {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-18vmin);
 }

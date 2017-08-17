@@ -16,7 +16,7 @@ var app = function() {
 	self.vue = new Vue({
 		el: "#app",
 		data: {
-            leaderboard: [],
+            leaderboard: [1, 2, 3],
             ticker: []
 		},
 		methods: {
