@@ -22,9 +22,6 @@ function initialize() {
 			ticker: []
 		},
 		methods: {
-			close: _ => socket.close(),
-			connect: ws_connect,
-			reset: reset,
 			get_team_color: Colors.get
 
 		}
