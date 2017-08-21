@@ -18,20 +18,24 @@ function initialize() {
 	vue = new Vue({
 		el: "#app",
 		data: {
-			leaderboard: [],
+			leaderboard: new List('laps'),
 			ticker: []
 		},
 		methods: {
-			insert: insert,
-			close: socket.close,
+			close: _ => socket.close(),
 			connect: ws_connect,
-			reset: reset
+			reset: reset,
+			get_team_color: Colors.get
 
 		}
 	});
 
 	// Show the webapp
 	$("#app").show();
+}
+
+function vue_initialize() {
+
 }
 
 // Connect to WS
@@ -45,15 +49,31 @@ function ws_connect() {
 
 function ws_onmessage(message) {
 	// Parse data
-	var data = JSON.parse(message.data);
-	console.log(data);
+	var message = JSON.parse(message.data);
+	var data = message.data;
+	var type = message.type;
 
-	// Send it to the ticker too
-	insert(data);
+
+	if (type == 'leaderboard') {
+
+		// Remove old value if necessary
+		if (data.old_val) {
+			vue.leaderboard.remove(data.old_val.id, 'id');
+		}
+
+		// Insert new value if necessary
+		if (data.new_val) {
+			vue.leaderboard.insert(data.new_val);
+		}
+	}
+	else if (type == 'ticker') {
+		ticker(data.new_val);
+	}
+
 }
 
-// Connected to button - maintains list of <= 10 timestamps
-function insert(data) {
+// Add to ticker
+function ticker(data) {
 	vue.ticker.splice(0, 0, data);
 	if (vue.ticker.length > 10) {
 		vue.ticker.pop();
@@ -62,6 +82,6 @@ function insert(data) {
 
 // Clear data
 function reset() {
-	vue.leaderboard = [];
+	vue.leaderboard = new List('laps');
 	vue.ticker = [];
 }

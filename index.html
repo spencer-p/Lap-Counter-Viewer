@@ -13,14 +13,16 @@
 				<div id="ticker">
 					<h1>Ticker</h1>
 					<transition-group name="list">
-						<div class="square list-item" v-for="i in ticker" :key="i"> {{ i }} </div>
+						<div class="square list-item" v-for="i in ticker" :key="i.id">
+							{{ i.name }} walked {{ i.laps }} laps
+						</div>
 					</transition-group>
 				</div>
 				<div id="leaderboard">
 					<h1>Leaderboard</h1>
 					<transition-group name="list">
-						<div class="card list-item" v-for="i in leaderboard" :key="i.id">
-							<h2>#{{ i.position }}: Team <em>{{ i.name }}</em></h2>
+						<div class="card list-item" v-for="i in leaderboard.arr" :key="i.id" :class="get_team_color(i.name)">
+							<h2>Team <em>{{ i.name }}</em></h2>
 							<h3>{{ i.laps }} laps</h3>
 						</div>
 					</transition-group>
@@ -29,6 +31,8 @@
 		</div>
 		<script type="text/javascript" src="js/jquery-min.js"></script>
 		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/list.js"></script>
+		<script type="text/javascript" src="js/teamcolors.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 	</body>
 </html>
