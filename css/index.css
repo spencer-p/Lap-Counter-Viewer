@@ -29,15 +29,9 @@ body {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	padding: 1vmin;
 	margin: 1vmin;
-	height: 15vmin;
 	width: 100vmin;
 	background: lightblue;
 }
-
-.purple {
-	background: orchid;
-}
-
 
 /* List transitions */
 .list-item {
@@ -47,4 +41,7 @@ body {
 .list-enter, .list-leave-to {
 	opacity: 0;
 	transform: translateX(-18vmin);
+}
+.list-leave-active {
+	position: absolute;
 }

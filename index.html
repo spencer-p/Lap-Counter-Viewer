@@ -6,18 +6,23 @@
 	</head>
 	<body onload="initialize()">
 		<div id="app" style="display:none;">
-			<button v-on:click="insert">Click me</button>
+			<button v-on:click="close">Close WebSocket</button>
+			<button v-on:click="reset">Reset Data</button>
+			<button v-on:click="connect">Reopen WebSocket</button>
 			<div id="parent">
 				<div id="ticker">
 					<h1>Ticker</h1>
 					<transition-group name="list">
-						<div class="square list-item" v-for="i in ticker" v-bind:key="i" v-bind:class="{ purple: i%2 == 1 }"> {{ i }} </div>
+						<div class="square list-item" v-for="i in ticker" :key="i"> {{ i }} </div>
 					</transition-group>
 				</div>
 				<div id="leaderboard">
 					<h1>Leaderboard</h1>
 					<transition-group name="list">
-						<div class="card list-item" v-for="i in leaderboard" v-bind:key="i"> {{ i }} </div>
+						<div class="card list-item" v-for="i in leaderboard" :key="i.id">
+							<h2>#{{ i.position }}: Team <em>{{ i.name }}</em></h2>
+							<h3>{{ i.laps }} laps</h3>
+						</div>
 					</transition-group>
 				</div>
 			</div>
