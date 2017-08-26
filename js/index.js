@@ -4,7 +4,7 @@
  * Manages websockets and data
  */
 
-var addr = "ws://10.0.1.20:8889/leaderboard_ws";
+var addr = "ws://10.0.1.20:8888/leaderboard_ws";
 var socket;
 var vue;
 
@@ -19,7 +19,7 @@ function initialize() {
 		el: "#app",
 		data: {
 			leaderboard: new List('laps'),
-			ticker: []
+			ticker: new List('last_updated_time')
 		},
 		methods: {
 			get_team_color: Colors.get
@@ -64,7 +64,12 @@ function ws_onmessage(message) {
 		}
 	}
 	else if (type == 'ticker') {
-		ticker(data.new_val);
+		if (data.old_val) {
+			vue.ticker.remove(data.old_val.id, 'id');
+		}
+		if (data.new_val) {
+			vue.ticker.insert(data.new_val);
+		}
 	}
 
 }
@@ -80,5 +85,5 @@ function ticker(data) {
 // Clear data
 function reset() {
 	vue.leaderboard = new List('laps');
-	vue.ticker = [];
+	vue.ticker = new List('last_updated_time');
 }

@@ -10,7 +10,7 @@
 				<div id="ticker">
 					<h1>Ticker</h1>
 					<transition-group name="list">
-						<div class="red square list-item" v-for="i in ticker" :key="i.id">
+						<div class="square list-item" v-for="i in ticker.arr" :key="i.id" :class="get_team_color(i.team_name)">
 							{{ i.name }} walked {{ i.laps }} laps
 						</div>
 					</transition-group>
