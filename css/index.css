@@ -4,15 +4,16 @@ body {
 
 #parent {
 	display: flex;
+	flex-direction: column;
 }
 
 #ticker {
-	width: 30%;
+	order: 2;
 	padding: 1vmin;
 }
 
 #leaderboard {
-	flex: 1;
+	order: 1;
 	padding: 1vmin;
 }
 
@@ -20,15 +21,13 @@ body {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	padding: 1vmin;
 	margin: 1vmin;
-	min-height: 15vmin;
-	min-width: 15vmin;
 }
 
 .card {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	padding: 1vmin;
 	margin: 1vmin;
-	width: 100vmin;
+	min-width: 45%;
 }
 
 /* List transitions */
