@@ -16,14 +16,14 @@ Colors.all_colors = [ 'navy', 'blue', 'aqua', 'teal', 'olive', 'green', 'lime',
 	'silver', 'gray', 'black' ];
 Colors.all_colors_index = 0;
 
-Colors.get = function(name) {
-	Colors.set(name);
-	return Colors.map[name];
+Colors.get = function(team_id) {
+	Colors.set(team_id);
+	return Colors.map[team_id];
 };
 
-Colors.set = function(name) {
-	if (!Colors.map[name]) {
-		Colors.map[name] = Colors.all_colors[Colors.all_colors_index%Colors.all_colors.length];
+Colors.set = function(team_id) {
+	if (!Colors.map[team_id]) {
+		Colors.map[team_id] = Colors.all_colors[Colors.all_colors_index%Colors.all_colors.length];
 		Colors.all_colors_index++;
 	}
 };
