@@ -18,7 +18,7 @@
 				</div>
 				<div id="leaderboard">
 					<h1>Leaderboard</h1>
-					<transition-group name="list">
+					<transition-group name="list" id="leaderboard-group">
 						<div class="card list-item" v-for="i in leaderboard.arr" :key="i.id" :class="get_team_color(i.id)">
 							<h2>Team <em>{{ i.name }}</em></h2>
 							<h3>{{ i.laps }} laps</h3>

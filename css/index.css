@@ -17,6 +17,13 @@ body {
 	padding: 1vmin;
 }
 
+#leaderboard-group {
+	display: flex;
+	flex-flow: column;
+	flex-wrap: wrap;
+	height: 70vh;
+}
+
 .square {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	padding: 1vmin;
@@ -27,7 +34,6 @@ body {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	padding: 1vmin;
 	margin: 1vmin;
-	min-width: 45%;
 }
 
 /* List transitions */
