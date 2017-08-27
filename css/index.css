@@ -12,16 +12,22 @@ body {
 	padding: 1vmin;
 }
 
+#ticker-group {
+	display: flex;
+}
+
 #leaderboard {
 	order: 1;
 	padding: 1vmin;
+	height: 70vh;
+	max-height: 70vh;
 }
 
 #leaderboard-group {
 	display: flex;
 	flex-flow: column;
 	flex-wrap: wrap;
-	height: 70vh;
+	height: 100%;
 }
 
 .square {
