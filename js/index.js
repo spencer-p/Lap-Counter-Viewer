@@ -10,9 +10,6 @@ var vue;
 
 // Connected to onload event on <body>
 function initialize() {
-	
-	// Connect to websocket
-	ws_connect();
 
 	// Vue object
 	vue = new Vue({
@@ -26,6 +23,9 @@ function initialize() {
 
 		}
 	});
+
+	// Connect to websocket
+	ws_connect();
 
 	// Show the webapp
 	document.getElementById("app").style.display = "";
