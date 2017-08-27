@@ -48,38 +48,40 @@ function ws_onmessage(message) {
 
 
 	if (type == 'leaderboard') {
-
-		// Remove old value if necessary
-		if (data.old_val) {
-			vue.leaderboard.remove(data.old_val.id, 'id');
-		}
-
-		// Insert new value if necessary
-		if (data.new_val) {
-			vue.leaderboard.insert(data.new_val);
-		}
+		update_leaderboard(data);
 	}
 	else if (type == 'ticker') {
-		if (data.old_val) {
-			vue.ticker.remove(data.old_val.id, 'id');
-		}
-		if (data.new_val) {
-			vue.ticker.insert(data.new_val);
-		}
+		update_ticker(data);
 	}
 
 }
 
-// Add to ticker
-function ticker(data) {
-	vue.ticker.splice(0, 0, data);
-	if (vue.ticker.length > 10) {
-		vue.ticker.pop();
+function update_leaderboard(data) {
+	// Remove old value if necessary
+	if (data.old_val) {
+		vue.leaderboard.remove(data.old_val.id, 'id');
+	}
+
+	// Insert new value if necessary
+	if (data.new_val) {
+		vue.leaderboard.insert(data.new_val);
 	}
 }
 
-// Clear data
-function reset() {
-	vue.leaderboard = new List('laps');
-	vue.ticker = new List('last_updated_time');
+function update_ticker(data) {
+	// Remove old ticker item
+	// TODO do we want this?
+	if (data.old_val) {
+		vue.ticker.remove(data.old_val.id, 'id');
+	}
+
+	// Insert new
+	if (data.new_val) {
+		vue.ticker.insert(data.new_val);
+	}
+
+	// Pop off the end of the ticker
+	if (vue.ticker.arr.length > 10) {
+		vue.ticker.arr.pop();
+	}
 }
