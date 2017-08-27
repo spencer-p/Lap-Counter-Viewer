@@ -28,11 +28,7 @@ function initialize() {
 	});
 
 	// Show the webapp
-	$("#app").show();
-}
-
-function vue_initialize() {
-
+	document.getElementById("app").style.display = "";
 }
 
 // Connect to WS
