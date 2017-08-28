@@ -13,7 +13,7 @@ function initialize() {
 
 	// Vue object
 	vue = new Vue({
-		el: "#app",
+		el: "#parent",
 		data: {
 			leaderboard: new List('laps'),
 			ticker: new List('last_updated_time')
@@ -28,7 +28,7 @@ function initialize() {
 	ws_connect();
 
 	// Show the webapp
-	document.getElementById("app").style.display = "initial";
+	document.getElementById("parent").style.display = "initial";
 }
 
 // Connect to WS
