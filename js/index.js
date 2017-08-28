@@ -28,7 +28,7 @@ function initialize() {
 	ws_connect();
 
 	// Show the webapp
-	document.getElementById("parent").style.display = "initial";
+	document.getElementById("parent").style.display = "flex";
 }
 
 // Connect to WS
