@@ -30,16 +30,30 @@ body {
 	height: 100%;
 }
 
-.square {
+.ticker-item {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	padding: 1vmin;
 	margin: 1vmin;
+	border-radius:25px;
 }
 
-.card {
+.ticker-lap-count {
+	font-size: 28px;
+}
+
+.leaderboard-item {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	padding: 1vmin;
+	font-size: 3.2em;
 	margin: 1vmin;
+	padding: 1vmin;
+}
+
+.leaderboard-table {
+	width: 100%;
+}
+
+.leaderboard-lap-count {
+	text-align: right;
 }
 
 /* List transitions */

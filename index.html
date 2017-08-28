@@ -10,18 +10,26 @@
 				<div id="ticker">
 					<h1>Ticker</h1>
 					<transition-group id="ticker-group" name="list">
-						<div class="square list-item" v-for="i in ticker.arr" :key="i.id" :class="get_team_color(i.team_id)">
-							{{ i.name }}<br>
-							{{ i.laps }} laps
+						<div class="ticker-item list-item" v-for="i in ticker.arr" :key="i.id" :class="get_team_color(i.team_id)">
+							<table>
+								<tr>
+									<td>{{ i.name }}</td>
+									<td class="ticker-lap-count">{{ i.laps }}</td>
+								</tr>
+							</table>
 						</div>
 					</transition-group>
 				</div>
 				<div id="leaderboard">
-					<h1>Leaderboard</h1>
+					<h1>Team Leaderboard</h1>
 					<transition-group name="list" id="leaderboard-group">
-						<div class="card list-item" v-for="i in leaderboard.arr" :key="i.id" :class="get_team_color(i.id)">
-							<h2>Team <em>{{ i.name }}</em></h2>
-							<h3>{{ i.laps }} laps</h3>
+						<div class="leaderboard-item list-item" v-for="i in leaderboard.arr" :key="i.id" :class="get_team_color(i.id)">
+							<table class="leaderboard-table">
+								<tr>
+									<td>{{ i.name }}</td>
+									<td class="leaderboard-lap-count">{{ i.laps }}</td>
+								</tr>
+							</table>
 						</div>
 					</transition-group>
 				</div>
