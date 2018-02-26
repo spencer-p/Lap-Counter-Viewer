@@ -11,9 +11,9 @@ var Colors = {}
 Colors.map = {};
 
 // All available colors
-Colors.all_colors = [ 'navy', 'blue', 'aqua', 'teal', 'olive', 'green', 'lime',
-	'yellow', 'orange', 'red', 'fuchsia', 'purple', 'maroon', 'white',
-	'silver', 'gray', 'black' ];
+Colors.all_colors = [ 'navy', 'red', 'blue', 'gray', 'orange', 'teal', 'olive', 
+	'purple', 'green', 'yellow', 'fuchsia', 'maroon', 'white', 'aqua',
+	'silver', 'black', 'lime' ];
 Colors.all_colors_index = 0;
 
 Colors.get = function(team_id) {
