@@ -65,9 +65,6 @@ body {
 	opacity: 0;
 	transform: translateX(-18vmin);
 }
-.list-leave-active {
-	position: absolute;
-}
 
 /* Colors - from stupid.css, from clrs.cc */
 .navy { background-color: #001F3F; color: hsla(210, 100%, 75%, 1.0); }

@@ -82,7 +82,7 @@ function update_ticker(data) {
 	}
 
 	// Pop off the end of the ticker
-	if (vue.ticker.arr.length > 10) {
+	if (vue.ticker.arr.length > 15) {
 		vue.ticker.arr.pop();
 	}
 }
