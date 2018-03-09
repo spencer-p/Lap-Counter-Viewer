@@ -33,8 +33,8 @@ function initialize() {
 
 // Connect to WS
 function ws_connect() {
-	// socket = new ReconnectingWebSocket(addr);
-	socket = new WebSocket(addr);
+	socket = new ReconnectingWebSocket(addr);
+	// socket = new WebSocket(addr);
 	socket.onopen = e => console.log(e);
 	socket.onclose = e => console.log(e);
 	socket.onerror = e => console.log(e);
