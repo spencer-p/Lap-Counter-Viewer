@@ -17,8 +17,9 @@ Colors.all_colors = [ 'navy', 'red', 'blue', 'gray', 'orange', 'teal', 'olive',
 Colors.all_colors_index = 0;
 
 Colors.get = function(team_id) {
-	Colors.set(team_id);
-	return Colors.map[team_id];
+    return Colors.all_colors[team_id];
+	// Colors.set(team_id);
+	// return Colors.map[team_id];
 };
 
 Colors.set = function(team_id) {
