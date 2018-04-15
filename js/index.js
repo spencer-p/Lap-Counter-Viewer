@@ -53,6 +53,8 @@ function ws_onmessage(message) {
 	}
 	else if (type == 'ticker') {
 		update_ticker(data);
+		var snd = new Audio('beep-07.mp3');
+		snd.play();
 	}
 
 }
