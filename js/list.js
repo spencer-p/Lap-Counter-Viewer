@@ -44,4 +44,8 @@ class List {
 			}
 		}
 	}
+
+	clear() {
+		this.arr = [];
+	}
 }

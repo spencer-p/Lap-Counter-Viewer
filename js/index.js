@@ -35,10 +35,15 @@ function initialize() {
 function ws_connect() {
 	socket = new ReconnectingWebSocket(addr);
 	// socket = new WebSocket(addr);
-	socket.onopen = e => console.log(e);
+	socket.onopen = ws_onopen;
 	socket.onclose = e => console.log(e);
 	socket.onerror = e => console.log(e);
 	socket.onmessage = ws_onmessage;
+}
+
+function ws_onopen(evt) {
+	vue.leaderboard.clear();
+	vue.ticker.clear();
 }
 
 function ws_onmessage(message) {
