@@ -58,8 +58,6 @@ function ws_onmessage(message) {
 	}
 	else if (type == 'ticker') {
 		update_ticker(data);
-		var snd = new Audio('beep-07.mp3');
-		snd.play();
 	}
 
 }
@@ -72,6 +70,9 @@ function update_leaderboard(data) {
 
 	// Insert new value if necessary
 	if (data.new_val) {
+		if (data.new_val['name'].length > 20) {
+			data.new_val['name'] = data.new_val['name'].substring(0,20) + "...";
+		}
 		vue.leaderboard.insert(data.new_val);
 	}
 }

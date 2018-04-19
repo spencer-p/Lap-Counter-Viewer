@@ -14,17 +14,14 @@ Colors.map = {};
 Colors.all_colors = [ 'navy', 'red', 'blue', 'gray', 'orange', 'teal', 'olive', 
 	'purple', 'green', 'yellow', 'fuchsia', 'maroon', 'white', 'aqua',
 	'silver', 'black', 'lime' ];
-Colors.all_colors_index = 0;
 
 Colors.get = function(team_id) {
-    return Colors.all_colors[team_id];
-	// Colors.set(team_id);
-	// return Colors.map[team_id];
+	Colors.set(team_id);
+	return Colors.map[team_id];
 };
 
 Colors.set = function(team_id) {
 	if (!Colors.map[team_id]) {
-		Colors.map[team_id] = Colors.all_colors[Colors.all_colors_index%Colors.all_colors.length];
-		Colors.all_colors_index++;
+		Colors.map[team_id] = Colors.all_colors[team_id % Colors.all_colors.length];
 	}
 };
