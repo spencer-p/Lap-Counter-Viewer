@@ -25,7 +25,7 @@
 					<div class="leaderboard-item list-item" v-for="i in leaderboard.arr" :key="i.id" :class="get_team_color(i.id)">
 						<table class="leaderboard-table">
 							<tr>
-								<td>{{ i.name }}</td>
+								<td class="leaderboard-team-name">{{ i.name }}</td>
 								<td class="leaderboard-lap-count">{{ i.laps }}</td>
 							</tr>
 						</table>
