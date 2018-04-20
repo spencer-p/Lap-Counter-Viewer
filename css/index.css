@@ -31,14 +31,21 @@ body {
 }
 
 .ticker-item {
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	padding: 1vmin;
-	margin: 1vmin;
 	border-radius:25px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	margin: 1vmin;
+	padding: 1vmin;
+}
+
+.ticker-tag-id {
+	border-right: 1px solid black;
+	font-size: 1.5em;
+	padding-right: 1vmin;
 }
 
 .ticker-lap-count {
-	font-size: 28px;
+	font-size: 2.5em;
+	padding-left: 1vmin;
 }
 
 .leaderboard-item {
