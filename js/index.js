@@ -4,7 +4,7 @@
  * Manages websockets and data
  */
 
-var addr = "ws://localhost:8888/leaderboard_ws";
+var addr = "ws://relay.local:8888/leaderboard_ws";
 var socket;
 var vue;
 
@@ -87,7 +87,7 @@ function update_ticker(data) {
 	}
 
 	// Pop off the end of the ticker
-	if (vue.ticker.arr.length > 15) {
+	if (vue.ticker.arr.length > 11) {
 		vue.ticker.arr.pop();
 	}
 }

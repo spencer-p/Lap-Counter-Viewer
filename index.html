@@ -6,8 +6,8 @@
 	</head>
 	<body onload="initialize()">
 		<div id="parent" style="display:none;">
-			<div id="ticker">
-				<h1>Ticker</h1>
+			<div id="ticker" style="border-top:2px solid black;">
+				<!-- <h1>Ticker</h1> -->
 				<transition-group id="ticker-group" name="list">
 					<div class="ticker-item list-item" v-for="i in ticker.arr" :key="i.id" :class="get_team_color(i.team_id)">
 						<table>
@@ -20,7 +20,7 @@
 				</transition-group>
 			</div>
 			<div id="leaderboard">
-				<h1>Team Leaderboard</h1>
+				<!-- <h1>Team Leaderboard</h1> -->
 				<transition-group name="list" id="leaderboard-group">
 					<div class="leaderboard-item list-item" v-for="i in leaderboard.arr" :key="i.id" :class="get_team_color(i.id)">
 						<table class="leaderboard-table">
