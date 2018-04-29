@@ -2,6 +2,11 @@ body {
 	font-family: Arial;
 }
 
+.body2 {
+	background-color: LightGray;
+	font-family: Arial;
+}
+
 #parent {
 	display: flex;
 	flex-direction: column;
@@ -21,6 +26,12 @@ body {
 	padding: 1vmin;
 	height: 80vh;
 	max-height: 80vh;
+}
+#leaderboard2 {
+	order: 1;
+	padding: 1vmin;
+	height: 100vh;
+	max-height: 100vh;
 }
 
 #leaderboard-group {
@@ -49,6 +60,15 @@ body {
 }
 
 .leaderboard-item {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	font-size: 3.2em;
+	margin: 1vmin;
+	padding: 1vmin;
+	width: 30%;
+}
+
+.leaderboard-item2 {
+	background-color: White;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	font-size: 3.2em;
 	margin: 1vmin;

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link type="text/css" rel="stylesheet" href="css/index.css"/>
+	</head>
+	<body onload="initialize()" class="body2">
+		<div id="parent" style="display:none;">
+			<div id="leaderboard2">
+				<transition-group name="list" id="leaderboard-group">
+					<div class="leaderboard-item2 list-item" v-for="i in leaderboard.arr" :key="i.id" :class="white">
+						<table class="leaderboard-table">
+							<tr>
+								<td>{{ i.emoji }}</td>
+								<td class="leaderboard-team-name">{{ i.name }}</td>
+								<td class="leaderboard-lap-count">{{ i.laps }}</td>
+							</tr>
+						</table>
+					</div>
+				</transition-group>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/reconnecting-websocket.js"></script>
+		<script type="text/javascript" src="js/vue.js"></script>
+		<script type="text/javascript" src="js/list.js"></script>
+		<script type="text/javascript" src="js/teamcolors.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
+</html>
