@@ -26,6 +26,9 @@ function initialize() {
 
 	// Show the webapp
 	document.getElementById("parent").style.display = "flex";
+
+	// Switch to the other view in five minutes
+	setTimeout(function(){window.location.href='index2.html'},300000);
 }
 
 // Connect to WS
