@@ -4,7 +4,7 @@
  * Manages websockets and data
  */
 
-// var addr = "ws://localhost:8888/leaderboard_ws";
+//var addr = "ws://localhost:8888/leaderboard_ws";
 var addr = "ws://relay.local:8888/leaderboard_ws";
 var socket;
 var vue;
@@ -16,13 +16,9 @@ function initialize() {
 	vue = new Vue({
 		el: "#parent",
 		data: {
-			leaderboard: new List('laps'),
+			leaderboard: new List('last_updated_time'),
 			ticker: new List('last_updated_time')
 		},
-		methods: {
-			get_team_color: Colors.get
-
-		}
 	});
 
 	// Connect to websocket
@@ -72,6 +68,11 @@ function update_leaderboard(data) {
 	// Insert new value if necessary
 	if (data.new_val) {
 		vue.leaderboard.insert(data.new_val);
+	}
+
+	// Pop off the end of the ticker
+	if (vue.leaderboard.arr.length > 3) {
+		vue.leaderboard.arr.pop();
 	}
 }
 

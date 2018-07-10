@@ -47,6 +47,11 @@ body {
 	margin: 1vmin;
 	padding: 1vmin;
 }
+.ticker-item2 {
+	font-size: 5em;
+	margin: 1vmin;
+	padding: 1vmin;
+}
 
 .ticker-tag-id {
 	border-right: 1px solid black;
@@ -70,10 +75,10 @@ body {
 .leaderboard-item2 {
 	background-color: White;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-	font-size: 3.2em;
+	font-size: 3.8em;
 	margin: 1vmin;
 	padding: 1vmin;
-	width: 30%;
+	width: 45%;
 }
 
 .leaderboard-table {
@@ -85,7 +90,7 @@ body {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
-	width: 82%;
+	width: 70%;
 }
 
 .leaderboard-lap-count {
