@@ -6,8 +6,9 @@
 	</head>
 	<body onload="initialize()" class="body2">
 		<div id="parent" style="display:none;">
-			<span style="font-size: 3em; font-style: italic;">Top 14 Teams</span>
-
+                        <div>
+			<span style="font-size: 3em; font-style: italic; color: red;">Top 14 Teams</span>
+                        </div>
 			<div id="leaderboard2">
 				<transition-group name="list" id="leaderboard-group">
 					<div class="leaderboard-item2 list-item" v-for="i in leaderboard.arr" :key="i.id">

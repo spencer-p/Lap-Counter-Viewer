@@ -5,6 +5,7 @@ body {
 }
 
 #heading {
+    color: Red;
     font-size: 4em; 
     font-style: italic; 
     margin-bottom: 0.5em;
